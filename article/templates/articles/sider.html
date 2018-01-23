@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+      <div class="sidebar-module sidebar-module-inset">
+        <h4>标签</h4>
+        <p>互联网 旅行 历史 摄影 Django</p>
+      </div>
+      <div class="sidebar-module">
+        <h4>归档</h4>
+        <ol class="list-unstyled">
+            {% if archive_list %}
+                {% for archive, year, month, count in archive_list %}
+                    <li><a href="/archive/{{ year }}/{{ month }}">{{ archive }}({{ count }})</a></li>
+                {% endfor %}
+            {% endif %}
+        </ol>
+      </div>
+      <div class="sidebar-module">
+        <h4>链接</h4>
+        <ol class="list-unstyled">
+          <li><a href="https://github.com/Alex2Apple">GitHub</a></li>
+        </ol>
+      </div>
+    </div><!-- /.blog-sidebar -->
+</html>

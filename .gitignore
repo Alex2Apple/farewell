@@ -1,0 +1,12 @@
+.svn/
+test-output/
+.project
+.settings/
+tmp
+temp
+*.log
+*.iml
+*.sqlite3
+media/
+00*.py
+__pycache__/
